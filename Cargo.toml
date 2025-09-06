@@ -1,0 +1,24 @@
+[package]
+name = "fnr-tool"
+version = "0.1.0"
+edition = "2021"
+description = "A blazingly fast file and directory renaming tool with gitignore support"
+license = "MIT"
+repository = "https://github.com/PatWiePersonal/fnr"
+keywords = ["cli", "rename", "files", "batch", "glob"]
+categories = ["command-line-utilities"]
+authors = ["Patrick Wieschollek <mail@patwie.com>"]
+
+[[bin]]
+name = "fnr"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0.99"
+clap = { version = "4.5.47", features = ["derive"] }
+colored = "3.0.0"
+crossterm = "0.29.0"
+globset = "0.4.16"
+globwalk = "0.9.1"
+ignore = "0.4.23"
+regex = "1.11.2"
